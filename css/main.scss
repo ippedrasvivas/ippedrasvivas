@@ -36,9 +36,24 @@
 // variables.less
 $theme-primary: #F05F40;
 $theme-dark: #222;
+$theme-green: #006400;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "mixins",
         "base"
 ;
+
+#onde {
+	padding: 50px 0
+}
+.map {
+    height: 350px;
+}
+
+@media(max-width:768px) {
+    .map {
+        height: 75%;
+    }
+}
+
