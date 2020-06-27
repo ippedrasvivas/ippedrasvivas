@@ -1,4 +1,4 @@
 ---
 layout: front
-headerimg: "../img/header.jpg"
+headerimg: "img/header.jpg"
 ---
