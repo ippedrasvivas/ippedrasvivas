@@ -60,7 +60,7 @@ p {
 }
 
 section {
-    padding: 100px 0;
+    padding: 55px 0;
 }
 
 aside {
@@ -72,6 +72,14 @@ aside {
 }
 
 // Navigation
+
+nav.navbar .dropdown.open .dropdown-toggle{
+    background-color: #e5e5e5;
+}
+
+nav.affix-top .dropdown.open .dropdown-toggle{
+    background-color: rgba(#333, .7);
+}
 
 .navbar-default {
     background-color: white;
@@ -88,7 +96,7 @@ aside {
             color: darken($theme-primary, 10%);
         }
     }
-    .nav {
+    .nav, .dropdown-menu {
         > li {
             > a,
             > a:focus {
@@ -130,7 +138,7 @@ aside {
             }
         }
         &.affix {
-            background-color: white;
+            background-color: rgba(white, .8);
             border-color: rgba($theme-dark, .5);
             .navbar-header .navbar-brand {
                 color: $theme-primary;
@@ -159,7 +167,6 @@ header {
     min-height: auto;
     @include background-cover;
     background-position: center;
-    background-image: url('../img/header.jpg');
     text-align: center;
     color: white;
     .header-content {
@@ -186,7 +193,12 @@ header {
         }
     }
     @media (min-width: 768px) {
-        min-height: 100%;
+        &.header-home {
+            min-height: 100%;
+        }
+        &.header-page {
+            min-height: 40%;
+        }
         .header-content {
             position: absolute;
             top: 50%;
@@ -295,6 +307,14 @@ header {
 
 .text-green {
     color: $theme-green;
+}
+
+.text-dark {
+    color: $theme-dark;
+}
+
+a .fa:hover {
+  color: $theme-green;
 }
 
 .no-gutter > [class*='col-'] {

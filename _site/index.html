@@ -17,6 +17,8 @@
     <!-- Custom Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
 
     <!-- Plugin CSS -->
@@ -31,7 +33,13 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
 
+    header {
+        background-image: url( ../img/header.jpg );
+    }
+
+    </style>
 </head>
 
 
@@ -52,6 +60,9 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
+                    <a class="page-scroll" style="display:none;" href="/">Início</a>
+                </li>
+                <li>
                     <a class="page-scroll" href="#sobre">Sobre nós</a>
                 </li>
                 <li>
@@ -63,8 +74,22 @@
                 <li>
                     <a class="page-scroll" href="#onde">Onde estamos</a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="#menu">Menu</a>
+                <li class="dropdown" >
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="nossa-fe">Nossa Fé</a></li>
+                        <li><a href="nossa-missao">Nossa Missão</a></li>
+                        <li><a href="nossa-visao">Nossa Visão</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="quem-somos">Quem somos</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="culto-solene">Culto Solene</a></li>
+                        <li><a href="pedras-alfa">Pedras Alfa</a></li>
+                        <li><a href="escola-da-vida">Escola da Vida</a></li>
+                        <li><a href="pgs">Grupos Pequenos</a></li>
+                        <li><a href="qen">Qual é a Novidade</a></li>
+                        <li><a href="em-familia">Em Família</a></li>
+                    </ul>
                 </li>
 
             </ul>
@@ -74,7 +99,7 @@
     <!-- /.container-fluid -->
 </nav>
 
-  <header>
+  <header class="header-home">
     <div class="header-content">
         <div class="header-content-inner">
             <h1>Igreja Presbiteriana<br>Pedras Vivas</h1>
@@ -232,7 +257,7 @@
       <div class="container text-center">
           <div class="call-to-action">
               <h2>Quer saber mais sobre nós?</h2>
-              <a href="#" class="btn btn-default btn-xl wow tada">Saber mais</a>
+              <a href="nossa-fe" class="btn btn-default btn-xl wow tada">Saber mais</a>
           </div>
       </div>
   </aside>
@@ -275,32 +300,32 @@
 
             <div class="col-lg-1 col-lg-offset-3 text-center">
                 <a href="https://www.facebook.com/ippedrasvivas">
-                    <i class="fa fa-facebook fa-3x wow bounceIn text-green" data-wow-delay=".1s"></i>
+                    <i class="fa fa-facebook fa-3x wow bounceIn text-dark" data-wow-delay=".1s"></i>
                 </a>
             </div>
             <div class="col-lg-1 text-center">
                 <a href="https://www.instagram.com/ippedrasvivas/">
-                    <i class="fa fa-instagram fa-3x wow bounceIn text-green" data-wow-delay=".1s"></i>
+                    <i class="fa fa-instagram fa-3x wow bounceIn text-dark" data-wow-delay=".1s"></i>
                 </a>
             </div>
             <div class="col-lg-1 text-center">
                 <a href="https://www.youtube.com/c/IgrejaPresbiterianaPedrasVivas">
-                <i class="fa fa-youtube fa-3x wow bounceIn text-green" data-wow-delay=".1s"></i>
+                <i class="fa fa-youtube fa-3x wow bounceIn text-dark" data-wow-delay=".1s"></i>
                 </a>
             </div>
             <div class="col-lg-1 text-center">
                 <a href="https://open.spotify.com/show/4p2dVJENnlIuC8EGC9Rd28">
-                <i class="fa fa-spotify fa-3x wow bounceIn text-green" data-wow-delay=".1s"></i>
+                <i class="fa fa-spotify fa-3x wow bounceIn text-dark" data-wow-delay=".1s"></i>
                 </a>
             </div>
             <div class="col-lg-1 text-center">
                 <a href="https://chat.whatsapp.com/IaqBTA0TepUJ8aSS6vLOFG">
-                <i class="fa fa-whatsapp fa-3x wow bounceIn text-green" data-wow-delay=".1s"></i>
+                <i class="fa fa-whatsapp fa-3x wow bounceIn text-dark" data-wow-delay=".1s"></i>
                 </a>
             </div>
             <div class="col-lg-1 text-center">
                 <a href="mailto:ippedrasvivas@gmail.com">
-                <i class="fa fa-envelope-o fa-3x wow bounceIn text-green" data-wow-delay=".1s"></i>
+                <i class="fa fa-envelope-o fa-3x wow bounceIn text-dark" data-wow-delay=".1s"></i>
                 </a>
             </div>
 

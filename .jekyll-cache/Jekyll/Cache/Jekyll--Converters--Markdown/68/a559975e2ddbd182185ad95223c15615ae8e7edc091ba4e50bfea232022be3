@@ -1,0 +1,33 @@
+I"<div class="container">
+    <div class="row">
+        <div class="col-lg-offset-2 col-lg-4">
+			<img src="img/nos.jpg" alt="" style="width: 650px;" />
+        </div>
+    </div>
+</div>
+
+<h2 id="oficiais">Oficiais</h2>
+
+<h3 id="pastores-e-presbíteros-conselho-da-igreja">Pastores e Presbíteros (Conselho da igreja)</h3>
+
+<p>Presbíteros ou pastores são aqueles que foram chamados por Deus para liderar e ensinar na igreja. Tais homens devem ensinar e liderar principalmente dedicando-se à Palavra de Deus e à oração.</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+			<img src="http://placehold.it/650x488" class="img-responsive" alt="" style="width: 650px;" />
+        </div>
+        <div class="col-lg-9">
+        	<p>
+			Rev. Sérvulo Silva - Pastor Titular<br />
+			Sérvulo é casado com Thais, e tem três lindos filhos: André, Darah e Hadassa. É o pastor titular e plantador da igreja. É formado em Teologia pelo Seminário Presbiteriano do Norte e pela Universidade Católica de Pernambuco (UNICAP). <br />
+
+			A Igreja Presbiteriana Pedras Vivas nasceu no seu coração em 2004, ainda quando estava no seminário. A vocação amadureceu, e após quatro anos servindo como pastor auxiliar em duas igreja diferentes, iniciou a plantação. A igreja foi oficialmente organizada em 2017.
+
+			Quando ele não está passando tempo com sua família ou servindo a sua igreja, você provavelmente vai encontrá-lo tomando café acompanhado de um bom livro.
+			</p>
+        </div>
+    </div>
+</div>
+
+:ET

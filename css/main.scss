@@ -1,4 +1,5 @@
 ---
+title: CSS Stylesheet
 ---
 
 @charset "utf-8";
@@ -40,15 +41,15 @@ $theme-green: #006400;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "mixins",
-        "base"
+    "mixins",
+    "base"
 ;
-
-#onde {
-	padding: 50px 0
-}
 .map {
     height: 350px;
+}
+
+p {
+	font-family: 'Lora', serif !important;
 }
 
 @media(max-width:768px) {
@@ -56,4 +57,3 @@ $theme-green: #006400;
         height: 75%;
     }
 }
-
