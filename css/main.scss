@@ -57,3 +57,19 @@ p {
         height: 75%;
     }
 }
+
+/* Adicionando transparência ao fundo da navbar */
+.navbar-grey {
+    background: rgba(0, 0, 0, 0.5); /* Preto com 50% de transparência */
+    border: none;
+}
+
+/* Mudar a cor do texto da navbar para branco para melhor contraste */
+.navbar-grey .navbar-nav > li > a {
+    color: #fff;
+}
+
+/* Mudar a cor do texto ao passar o mouse */
+.navbar-grey .navbar-nav > li > a:hover {
+    color: #dcdcdc;
+}
