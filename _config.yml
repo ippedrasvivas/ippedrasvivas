@@ -6,14 +6,14 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "ippedrasvivas" # the base hostname & protocol for your site
 
-twitter_username: 
-github_username:  
+twitter_username:
+github_username:
 
 address:
   - line: Igreja Presbiteriana Pedras Vivas
-  - line: Rua Gonçalves Dias, 138
+  - line: Av. Dr. Euríco Chaves, 39 - Casa Amarela
   - line: "Recife, Pernambuco, Brasil"
-  # Feel free to add more lines here 
+  # Feel free to add more lines here
 
 # API settings
 google_api_key: AIzaSyA8H0jVz_6Hc273rqNYKQ6AAiBvQfVKmYQ
