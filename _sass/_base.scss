@@ -4,8 +4,17 @@ body {
     width: 100%;
 }
 
+footer.navbar {
+    background: #e9dfd3;
+    border-top: 1px solid rgba(185, 166, 146, 0.6);
+    margin-bottom: 0;
+    padding: 20px 0 10px;
+}
+
 body {
     @include serif-font;
+    background: #efe6da;
+    color: #3e352d;
 }
 
 hr {
@@ -33,17 +42,50 @@ h3,
 h4,
 h5,
 h6 {
-    @include sans-serif-font;
+    @include serif-font;
+    letter-spacing: 0.02em;
 }
 
 p {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
+    @include sans-serif-font;
+}
+
+.bg-default {
+    background-color: $theme-cream;
+}
+
+.bg-default .text-muted {
+    color: rgba(62, 53, 45, 0.75);
+}
+
+.bg-sand {
+    background-color: $theme-sand;
+}
+
+.bg-sand .text-muted {
+    color: rgba(62, 53, 45, 0.75);
 }
 
 .bg-primary {
     background-color: $theme-primary;
+    color: #f7f1e8;
+}
+
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary h4,
+.bg-primary h5,
+.bg-primary h6,
+.bg-primary p {
+    color: #f7f1e8;
+}
+
+.bg-primary hr {
+    border-color: rgba(247, 241, 232, 0.85);
 }
 
 .bg-green {
@@ -61,6 +103,10 @@ p {
 
 section {
     padding: 55px 0;
+}
+
+.section-compact {
+    padding: 35px 0;
 }
 
 aside {
@@ -82,15 +128,16 @@ nav.affix-top .dropdown.open .dropdown-toggle{
 }
 
 .navbar-default {
-    background-color: white;
-    border-color: rgba($theme-dark, .5);
+    background-color: rgba($theme-cream, .98);
+    border-color: rgba($theme-stone, .6);
     @include sans-serif-font;
     @include transition-all;
     .navbar-header .navbar-brand {
-        color: $theme-primary;
+        color: $theme-dark;
         @include sans-serif-font;
         font-weight: 700;
         text-transform: uppercase;
+        letter-spacing: 0.08em;
         &:hover,
         &:focus {
             color: darken($theme-primary, 10%);
@@ -121,27 +168,27 @@ nav.affix-top .dropdown.open .dropdown-toggle{
         }
     }
     @media (min-width: 768px) {
-        background-color: transparent;
-        border-color: rgba(white, .3);
+        background-color: rgba(239, 230, 218, 0.6);
+        border-color: rgba($theme-stone, .25);
         .navbar-header .navbar-brand {
-            color: rgba(white, .7);
+            color: $theme-dark;
             &:hover,
             &:focus {
-                color: white;
+                color: $theme-primary;
             }
         }
         .nav > li > a,
         .nav > li > a:focus {
-            color: rgba(white, .7);
+            color: $theme-dark;
             &:hover {
-                color: white;
+                color: $theme-primary;
             }
         }
         &.affix {
-            background-color: rgba(white, .8);
-            border-color: rgba($theme-dark, .5);
+            background-color: rgba(239, 230, 218, 0.98);
+            border-color: rgba($theme-stone, .6);
             .navbar-header .navbar-brand {
-                color: $theme-primary;
+                color: $theme-dark;
                 font-size: 14px;
                 &:hover,
                 &:focus {
@@ -159,6 +206,35 @@ nav.affix-top .dropdown.open .dropdown-toggle{
     }
 }
 
+.navbar-default .navbar-toggle {
+    border-color: rgba($theme-stone, .7);
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: $theme-dark;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    height: auto;
+}
+
+.navbar-brand img {
+    height: 42px;
+    width: auto;
+}
+
+.navbar-brand span {
+    @include serif-font;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
 // Homepage Header
 
 header {
@@ -168,16 +244,21 @@ header {
     @include background-cover;
     background-position: center;
     text-align: center;
-    color: white;
+    color: #f7f1e8;
+    background-color: #9b8a76;
+    background-blend-mode: multiply;
     .header-content {
         position: relative;
         text-align: center;
         padding: 100px 15px 100px;
         width: 100%;
+        z-index: 1;
         .header-content-inner {
+            max-width: 720px;
+            margin: 0 auto;
             h1 {
                 font-weight: 700;
-                text-transform: uppercase;
+                text-transform: none;
                 margin-top: 0;
                 margin-bottom: 0;
             }
@@ -186,7 +267,7 @@ header {
             }
             p {
                 font-weight: 300;
-                color: rgba(white, .7);
+                color: rgba(247, 241, 232, .8);
                 font-size: 16px;
                 margin-bottom: 50px;
             }
@@ -219,6 +300,87 @@ header {
             }
         }
     }
+}
+
+header.header-home {
+    background-image: linear-gradient(140deg, rgba(130, 113, 92, 0.7), rgba(62, 53, 45, 0.7)), url('../img/stones.jpg') !important;
+}
+
+header.header-page {
+    background-image: linear-gradient(160deg, rgba(154, 136, 110, 0.78), rgba(62, 53, 45, 0.78)) !important;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(255, 255, 255, 0.12), rgba(62, 53, 45, 0.45));
+    pointer-events: none;
+    z-index: 0;
+}
+
+.brand-lockup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.brand-mark {
+    width: 360px;
+    max-width: 82%;
+    height: auto;
+    filter: drop-shadow(0 12px 30px rgba(44, 37, 30, 0.4));
+}
+
+.brand-title {
+    font-size: clamp(32px, 5vw, 56px);
+    letter-spacing: 0.05em;
+}
+
+.brand-subtitle {
+    @include sans-serif-font;
+    font-size: 16px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(247, 241, 232, 0.75);
+}
+
+.brand-panel {
+    padding: 40px 0;
+}
+
+.brand-seal {
+    height: clamp(190px, 14vw, 450px);
+    width: auto;
+    max-width: 90%;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 12px 24px rgba(62, 53, 45, 0.18));
+}
+
+.brand-seal-ipb {
+    height: clamp(190px, 14vw, 450px);
+    width: auto;
+    max-width: 90%;
+}
+
+@media (max-width: 767px) {
+    .brand-panel .col-sm-6 {
+        margin-bottom: 18px;
+    }
+
+    .brand-seal,
+    .brand-seal-ipb {
+        height: clamp(80px, 22vw, 120px);
+        max-width: 80%;
+    }
+}
+
+.brand-caption {
+    @include sans-serif-font;
+    font-size: 18px;
+    color: rgba(62, 53, 45, 0.8);
+    margin-bottom: 0;
 }
 
 // Sections
@@ -320,6 +482,51 @@ a .fa:hover {
   color: $theme-green;
 }
 
+.icon-animate {
+    display: inline-block;
+    transform-origin: center;
+}
+
+.icon-animate:hover {
+    animation: icon-float 1.8s ease-in-out infinite, icon-glow 1.8s ease-in-out infinite;
+}
+
+@keyframes icon-float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes icon-glow {
+    0% {
+        transform: translateY(0) scale(1);
+        text-shadow: 0 0 0 rgba(239, 230, 218, 0);
+    }
+    50% {
+        transform: translateY(-2px) scale(1.04);
+        text-shadow: 0 0 12px rgba(239, 230, 218, 0.5);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        text-shadow: 0 0 0 rgba(239, 230, 218, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .icon-animate {
+        animation: none;
+    }
+    .icon-animate:hover {
+        animation: none;
+    }
+}
+
 .no-gutter > [class*='col-'] {
     padding-right:0;
     padding-left:0;
@@ -331,14 +538,15 @@ a .fa:hover {
 }
 
 .btn-primary {
-    @include button-variant(white, $theme-primary, $theme-primary);
+    @include button-variant(#f7f1e8, $theme-primary, $theme-primary);
 }
 
 .btn {
     @include sans-serif-font;
     border: none;
-    border-radius: 300px;
-    font-weight: 700;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
 }
 
@@ -379,4 +587,3 @@ img::-moz-selection {
 body {
     -webkit-tap-highlight-color: $theme-dark;
 }
-

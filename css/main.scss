@@ -35,9 +35,12 @@ title: CSS Stylesheet
 // }
 
 // variables.less
-$theme-primary: #F05F40;
-$theme-dark: #222;
-$theme-green: #006400;
+$theme-primary: #8a7b5e;
+$theme-dark: #3e352d;
+$theme-green: #6f7a62;
+$theme-cream: #efe6da;
+$theme-sand: #d9cab8;
+$theme-stone: #b9a692;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
@@ -48,10 +51,6 @@ $theme-green: #006400;
     height: 350px;
 }
 
-p {
-	font-family: 'Lora', serif !important;
-}
-
 @media(max-width:768px) {
     .map {
         height: 75%;
@@ -60,16 +59,17 @@ p {
 
 /* Adicionando transparência ao fundo da navbar */
 .navbar-grey {
-    background: rgba(0, 0, 0, 0.5); /* Preto com 50% de transparência */
-    border: none;
+    background: rgba(239, 230, 218, 0.92);
+    border: 1px solid rgba(185, 166, 146, 0.45);
+    box-shadow: 0 12px 24px rgba(62, 53, 45, 0.08);
 }
 
 /* Mudar a cor do texto da navbar para branco para melhor contraste */
 .navbar-grey .navbar-nav > li > a {
-    color: #fff;
+    color: $theme-dark;
 }
 
 /* Mudar a cor do texto ao passar o mouse */
 .navbar-grey .navbar-nav > li > a:hover {
-    color: #dcdcdc;
+    color: $theme-primary;
 }
