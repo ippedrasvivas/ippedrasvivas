@@ -1,20 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 {% include head.html %}
-
-<style type="text/css">
-    p {
-        font-size: 1.5em !important;
-    }
-
-    header {
-        background-repeat:no-repeat;
-        background-size: 100%;
-
-    }
-
-</style>
 
 <body id="page-top">
     {% include nav.html %}
@@ -33,7 +20,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-justify">
+                <div class="col-12 page-content">
                     {{content | markdownify}}
                 </div>
             </div>
@@ -42,10 +29,6 @@
 
     {% include footer.html %}
     {% include scripts.html %}
-    {% include secoes/menu_script.html %}
-
 </body>
-
-
 
 </html>
