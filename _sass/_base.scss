@@ -61,14 +61,14 @@ section { padding: 60px 0; }
 aside { padding: 60px 0; }
 
 .bg-primary {
-    background-color: var(--color-olive);
+    background-color: var(--color-olive) !important;
     color: var(--color-surface);
     h1, h2, h3, h4, h5, h6, p { color: var(--color-surface); }
     hr { border-color: rgba(250,248,245,0.4); }
 }
 
 .bg-dark {
-    background-color: var(--color-dark);
+    background-color: var(--color-dark) !important;
     color: var(--color-cream);
     h1, h2, h3, h4, h5, h6 { color: var(--color-silver); }
     p { color: var(--color-cream); }
