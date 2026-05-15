@@ -4,72 +4,13 @@ title: CSS Stylesheet
 
 @charset "utf-8";
 
-// Example Defaults
-// $base-font-family: Helvetica, Arial, sans-serif;
-// $base-font-size:   16px;
-// $small-font-size:  $base-font-size * 0.875;
-// $base-line-height: 1.5;
+// Brand palette (Pantone official)
+$color-olive:       #84754E; // Pantone 871 C
+$color-taupe:       #A39382; // Pantone 7530 C
+$color-silver:      #C4BCB7; // Pantone 406 C
+$color-terracotta:  #C07D59; // Pantone 7591 C
+$color-cream:       #DBC8B6; // Pantone 482 C
+$color-surface:     #FAF8F5;
+$color-dark:        #2B2318;
 
-// $spacing-unit:     30px;
-
-// $text-color:       #111;
-// $background-color: #fdfdfd;
-// $brand-color:      #2a7ae2;
-
-// $grey-color:       #828282;
-// $grey-color-light: lighten($grey-color, 40%);
-// $grey-color-dark:  darken($grey-color, 25%);
-
-// // Width of the content area
-// $content-width:    800px;
-
-// $on-palm:          600px;
-// $on-laptop:        800px;
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-
-// variables.less
-$theme-primary: #8a7b5e;
-$theme-dark: #3e352d;
-$theme-green: #6f7a62;
-$theme-cream: #efe6da;
-$theme-sand: #d9cab8;
-$theme-stone: #b9a692;
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-    "mixins",
-    "base"
-;
-.map {
-    height: 350px;
-}
-
-@media(max-width:768px) {
-    .map {
-        height: 75%;
-    }
-}
-
-/* Adicionando transparência ao fundo da navbar */
-.navbar-grey {
-    background: rgba(239, 230, 218, 0.92);
-    border: 1px solid rgba(185, 166, 146, 0.45);
-    box-shadow: 0 12px 24px rgba(62, 53, 45, 0.08);
-}
-
-/* Mudar a cor do texto da navbar para branco para melhor contraste */
-.navbar-grey .navbar-nav > li > a {
-    color: $theme-dark;
-}
-
-/* Mudar a cor do texto ao passar o mouse */
-.navbar-grey .navbar-nav > li > a:hover {
-    color: $theme-primary;
-}
+@import "mixins", "base";
