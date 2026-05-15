@@ -42,9 +42,10 @@ a {
 }
 
 hr {
-    border-color: var(--color-terracotta);
-    border-width: 2px;
+    border: 0;
+    border-top: 2px solid var(--color-terracotta);
     max-width: 40px;
+    margin: 0 auto;
     opacity: 1;
 }
 
