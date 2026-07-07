@@ -35,10 +35,12 @@ p {
     color: var(--color-text-muted);
 }
 
+// darker terracotta than the brand tone: #C07D59 is only 3.14:1 on
+// the surface color, below the 4.5:1 AA floor for body-size links
 a {
     @include transition-all;
-    color: var(--color-terracotta);
-    &:hover, &:focus { color: #a86a49; }
+    color: #8F5433;
+    &:hover, &:focus { color: #7A4527; }
 }
 
 hr {
@@ -77,6 +79,16 @@ aside { padding: 60px 0; }
     a { color: var(--color-cream); }
 }
 
+// the home mission statement is paragraph-length text in an h2 —
+// give it lede sizing/leading instead of display-heading metrics
+#sobre-texto h2 {
+    font-size: clamp(1.2rem, calc(1rem + 1.4vw), 1.75rem);
+    line-height: 1.55;
+    max-width: 52rem;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
 .text-muted    { color: var(--color-text-muted) !important; }
 .text-primary  { color: var(--color-olive) !important; }
 .text-dark     { color: var(--color-dark) !important; }
@@ -85,7 +97,7 @@ aside { padding: 60px 0; }
 #mainNav {
     @include sans-serif-font;
     @include transition-all;
-    background: rgba(250,248,245,0.55);
+    background: rgba(250,248,245,0.85);
     border-bottom: 1px solid transparent;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -249,7 +261,7 @@ header::after {
 
 @media (max-width: 767px) {
     .brand-panel .col-sm-6 { margin-bottom: 18px; }
-    .brand-seal, .brand-seal-ipb { height: clamp(80px,22vw,120px); max-width: 80%; }
+    .brand-seal, .brand-seal-ipb { height: clamp(120px, 38vw, 170px); max-width: 80%; }
 }
 
 // ── Service boxes ──────────────────────────────────────────────────────────
@@ -277,12 +289,13 @@ header::after {
 .btn-xl { padding: 14px 32px; font-size: 13px; }
 
 .btn-primary {
-    background-color: var(--color-terracotta);
-    border-color: var(--color-terracotta);
+    // #9A5E3C keeps the terracotta family but gives white text 5.2:1
+    background-color: #9A5E3C;
+    border-color: #9A5E3C;
     color: #fff;
     &:hover, &:focus, &:active {
-        background-color: #a86a49;
-        border-color: #a86a49;
+        background-color: #8F5433;
+        border-color: #8F5433;
         color: #fff;
     }
 }
@@ -337,7 +350,7 @@ header::after {
 
 // ── Map ────────────────────────────────────────────────────────────────────
 .map { height: 350px; }
-@media (max-width: 767px) { .map { height: 75%; } }
+@media (max-width: 767px) { .map { height: 300px; } }
 
 // ── Calendar ───────────────────────────────────────────────────────────────
 .calendar-wrap {
@@ -350,13 +363,13 @@ header::after {
 
 .calendar-embed {
     width: 100%;
-    height: 720px;
+    min-height: 720px;
     border: 0;
     border-radius: 12px;
     background: var(--color-surface);
 }
 
-@media (max-width: 767px) { .calendar-embed { height: 900px; } }
+@media (max-width: 767px) { .calendar-embed { min-height: 1100px; } }
 
 // ── Footer ─────────────────────────────────────────────────────────────────
 footer {
@@ -366,12 +379,29 @@ footer {
     padding: 20px 0 10px;
 }
 
-footer h4 { color: var(--color-olive); }
+footer h4 { color: var(--color-text); }
 footer a  { color: var(--color-taupe); }
-footer a:hover { color: var(--color-terracotta); }
+footer a:hover { color: #8F5433; }
+
+.footer-social a { display: inline-flex; padding: 10px; }
 
 // ── Page content (layout: page) ────────────────────────────────────────────
-.page-content p { font-size: 1.3em; line-height: 1.75; }
+.page-content {
+    max-width: 46rem;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+// the base p rule sets 16px, so inherit must be restated here
+.page-content p { font-size: inherit; line-height: inherit; }
+
+// full-bleed pages (e.g. the calendar) opt out of the reading measure
+.page-content-wide { max-width: none; }
+
+.page-content h2 { margin-top: 3rem; }
+.page-content h3 { margin-top: 2.25rem; }
+.page-content h2 + h3 { margin-top: 0.75rem; }
 
 // ── Link icon hover ────────────────────────────────────────────────────────
 a .fa:hover { color: var(--color-terracotta); }

@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A Igreja Presbiteriana Pedras Vivas é uma igreja cristã reformada no Recife, comprometida com a proclamação do evangelho de Jesus Cristo e com a integridade no ensino e prática bíblica da igreja local.">
 
-    <title>Nossa fé · Igreja Presbiteriana Pedras Vivas</title>
+    <title>Igreja Presbiteriana Pedras Vivas</title>
 
     <link rel="icon" type="image/png" href="/img/ippv-logo-2026.png">
 
-    <meta property="og:title" content="Nossa fé · Igreja Presbiteriana Pedras Vivas">
+    <meta property="og:title" content="Igreja Presbiteriana Pedras Vivas">
     <meta property="og:description" content="A Igreja Presbiteriana Pedras Vivas é uma igreja cristã reformada no Recife, comprometida com a proclamação do evangelho de Jesus Cristo e com a integridade no ensino e prática bíblica da igreja local.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.ippedrasvivas.com.br/img/ippv-logo-2026.png">
@@ -35,6 +35,109 @@
     </style>
 </head>
 
+
+<style>
+.links-page {
+    min-height: 100vh;
+    background: var(--color-surface, #FAF8F5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 60px;
+}
+
+.links-inner {
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+}
+
+.links-logo {
+    width: 120px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+    filter: drop-shadow(0 4px 12px rgba(43,35,24,0.15));
+}
+
+.links-name {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.3rem;
+    color: #84754E;
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+}
+
+.links-tagline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.9rem;
+    color: #6B5B4E;
+    margin-bottom: 40px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    border: 1.5px solid #DBC8B6;
+    border-radius: 8px;
+    padding: 16px 24px;
+    margin-bottom: 14px;
+    text-decoration: none;
+    color: #3A2E22;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(43,35,24,0.06);
+}
+
+.link-card:hover {
+    border-color: #C07D59;
+    color: #C07D59;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(43,35,24,0.12);
+    text-decoration: none;
+}
+
+.link-card .link-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #FAF8F5;
+    border: 1.5px solid #DBC8B6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #84754E;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.link-card:hover .link-icon {
+    background: #C07D59;
+    border-color: #C07D59;
+    color: #fff;
+}
+
+.link-card .link-label {
+    flex: 1;
+    text-align: left;
+}
+
+.link-divider {
+    border: none;
+    border-top: 1px solid #DBC8B6;
+    margin: 28px 0;
+    max-width: 100%;
+    opacity: 1;
+}
+</style>
 
 <body id="page-top">
     <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
@@ -78,48 +181,39 @@
     </div>
 </nav>
 
-    <header class="header-page">
-        <div class="header-content">
-            
-            <div class="header-content-inner">
-                <h1>Nossa fé</h1>
-                <hr>
-                
-            </div>
-            
+
+    <div class="links-page">
+        <div class="links-inner">
+            <img src="img/ippv-logo-2026.png" alt="Logo Igreja Presbiteriana Pedras Vivas" class="links-logo">
+            <h1 class="links-name">Nossos links</h1>
+
+            <a href="https://www.instagram.com/ippedrasvivas/" class="link-card" target="_blank" rel="noopener">
+                <div class="link-icon"><i class="fa-brands fa-instagram"></i></div>
+                <span class="link-label">Instagram</span>
+                <i class="fa fa-arrow-right fa-sm" style="color:#C4BCB7;"></i>
+            </a>
+
+            <a href="https://www.youtube.com/c/IgrejaPresbiterianaPedrasVivas" class="link-card" target="_blank" rel="noopener">
+                <div class="link-icon"><i class="fa-brands fa-youtube"></i></div>
+                <span class="link-label">YouTube</span>
+                <i class="fa fa-arrow-right fa-sm" style="color:#C4BCB7;"></i>
+            </a>
+
+            <a href="https://open.spotify.com/show/4p2dVJENnlIuC8EGC9Rd28" class="link-card" target="_blank" rel="noopener">
+                <div class="link-icon"><i class="fa-brands fa-spotify"></i></div>
+                <span class="link-label">Spotify</span>
+                <i class="fa fa-arrow-right fa-sm" style="color:#C4BCB7;"></i>
+            </a>
+
+            <hr class="link-divider">
+
+            <a href="mailto:ippedrasvivas@gmail.com" class="link-card">
+                <div class="link-icon"><i class="fa fa-envelope"></i></div>
+                <span class="link-label">ippedrasvivas@gmail.com</span>
+                <i class="fa fa-arrow-right fa-sm" style="color:#C4BCB7;"></i>
+            </a>
         </div>
-    </header>
-
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 page-content">
-                    <p>Cremos na Escritura Sagrada como única e suficiente Palavra de Deus que nos revela tudo o que devemos crer a respeito dEle e todo dever que Ele requer de nós.</p>
-
-<p><strong>Cremos, como a Escritura nos revela:</strong></p>
-
-<ul>
-  <li>
-    <p>No Deus Trino e criador de todas as coisas e que determinou a natureza de todas elas previamente.  Assim, o homem só possui sentido e significado na relação com o Deus da Palavra, sendo criado à Sua imagem e semelhança.</p>
-  </li>
-  <li>
-    <p>No pacto estabelecido por Deus com o homem na sua criação; na quebra do pacto pelo homem e pela mulher, nossos primeiros pais; na depravação total e na maldição que decorre do primeiro pecado de Adão sobre toda a humanidade e que nos afasta da relação com Deus, corrompendo toda nossa natureza.</p>
-  </li>
-  <li>
-    <p>Que o Senhor não abandonou seus planos após a queda e nem foi surpreendido por ela, mas eternamente providenciou a redenção do homem e de todas as coisas através de seu Filho. Desta forma, toda a Escritura nos revela o drama do evangelho consistindo na ativa ação do Deus santo e puro reconciliando consigo o homem pecador e depravado. O evangelho é a boa nova de Deus, que reconcilia consigo mesmo, através da cruz do Senhor Jesus Cristo, todo homem que se arrepende e crê. Portanto, tudo que fazemos e somos tem um único fim: glorificar o nome do Senhor.</p>
-  </li>
-  <li>
-    <p>Que através do Evangelho de Jesus Cristo, o homem interior é transformado pelo Espírito Santo. Essa transformação é refletida nos seus relacionamentos e no meio em que o Senhor o estabelece. Somos reconciliados na missão e para a missão de Deus de glorificar o Seu nome e proclamar a glória e a graça da Sua salvação a todos.</p>
-  </li>
-  <li>
-    <p>Que o Senhor Jesus está edificando a Sua Igreja composta pelos redimidos no seu sangue, os quais Ele mesmo conduz pelo Seu Espírito, guarda, preserva e os ressuscitará para a eternidade no novos céus e nova terra em que habitaremos depois dEle voltar para consumar a sua obra de redenção de todas as coisas.</p>
-  </li>
-</ul>
-
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <footer>
     <div class="container">
