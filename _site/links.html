@@ -30,6 +30,109 @@
 </head>
 
 
+<style>
+.links-page {
+    min-height: 100vh;
+    background: var(--color-surface, #FAF8F5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 60px;
+}
+
+.links-inner {
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+}
+
+.links-logo {
+    width: 120px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+    filter: drop-shadow(0 4px 12px rgba(43,35,24,0.15));
+}
+
+.links-name {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.3rem;
+    color: #84754E;
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+}
+
+.links-tagline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.9rem;
+    color: #6B5B4E;
+    margin-bottom: 40px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    border: 1.5px solid #DBC8B6;
+    border-radius: 8px;
+    padding: 16px 24px;
+    margin-bottom: 14px;
+    text-decoration: none;
+    color: #3A2E22;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(43,35,24,0.06);
+}
+
+.link-card:hover {
+    border-color: #C07D59;
+    color: #C07D59;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(43,35,24,0.12);
+    text-decoration: none;
+}
+
+.link-card .link-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #FAF8F5;
+    border: 1.5px solid #DBC8B6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #84754E;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.link-card:hover .link-icon {
+    background: #C07D59;
+    border-color: #C07D59;
+    color: #fff;
+}
+
+.link-card .link-label {
+    flex: 1;
+    text-align: left;
+}
+
+.link-divider {
+    border: none;
+    border-top: 1px solid #DBC8B6;
+    margin: 28px 0;
+    max-width: 100%;
+    opacity: 1;
+}
+</style>
+
 <body id="page-top">
     <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
     <div class="container">
@@ -71,36 +174,39 @@
     </div>
 </nav>
 
-    <header class="header-page">
-        <div class="header-content">
-            
-            <div class="header-content-inner">
-                <h1>Nossa Missão</h1>
-                <hr>
-                
-            </div>
-            
+
+    <div class="links-page">
+        <div class="links-inner">
+            <img src="img/ippv-logo-2026.png" alt="Logo Igreja Presbiteriana Pedras Vivas" class="links-logo">
+            <h1 class="links-name">Nossos links</h1>
+
+            <a href="https://www.instagram.com/ippedrasvivas/" class="link-card" target="_blank" rel="noopener">
+                <div class="link-icon"><i class="fa-brands fa-instagram"></i></div>
+                <span class="link-label">Instagram</span>
+                <i class="fa fa-arrow-right fa-sm" style="color:#C4BCB7;"></i>
+            </a>
+
+            <a href="https://www.youtube.com/c/IgrejaPresbiterianaPedrasVivas" class="link-card" target="_blank" rel="noopener">
+                <div class="link-icon"><i class="fa-brands fa-youtube"></i></div>
+                <span class="link-label">YouTube</span>
+                <i class="fa fa-arrow-right fa-sm" style="color:#C4BCB7;"></i>
+            </a>
+
+            <a href="https://open.spotify.com/show/4p2dVJENnlIuC8EGC9Rd28" class="link-card" target="_blank" rel="noopener">
+                <div class="link-icon"><i class="fa-brands fa-spotify"></i></div>
+                <span class="link-label">Spotify</span>
+                <i class="fa fa-arrow-right fa-sm" style="color:#C4BCB7;"></i>
+            </a>
+
+            <hr class="link-divider">
+
+            <a href="mailto:ippedrasvivas@gmail.com" class="link-card">
+                <div class="link-icon"><i class="fa fa-envelope"></i></div>
+                <span class="link-label">ippedrasvivas@gmail.com</span>
+                <i class="fa fa-arrow-right fa-sm" style="color:#C4BCB7;"></i>
+            </a>
         </div>
-    </header>
-
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 page-content">
-                    <p>A vida de nossa comunidade pretende ser: o indivíduo que se depara com o evangelho integral (em sua totalidade, verdade e prática), desenvolve relacionamentos integrais (com Deus, com o próximo e com seu homem interior), e desenvolve uma missão integral (age na transformação do próprio meio) pelo conhecimento da Palavra de Deus.</p>
-
-<p><strong>Evangelho Integral</strong>: o evangelho que alcança e restaura não apenas a alma e assegura a eternidade com Deus, mas também o corpo e as relações presentes;</p>
-
-<p><strong>Relacionamento Integral</strong>: as vias das relações humanas dos indivíduos que foram alcançadas por este evangelho, baseando-se nele e sendo orientadas para o ideal projetado por Deus;</p>
-
-<p><strong>Missão Integral</strong>:  aquela que nasce do entendimento de que a igreja é a única agência de Deus na Terra e que as pessoas são a igreja, agindo como Corpo de Cristo influenciando todas as áreas da sociedade.</p>
-
-<p>Somos uma igreja simples para um mundo complexo.</p>
-
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <footer>
     <div class="container">

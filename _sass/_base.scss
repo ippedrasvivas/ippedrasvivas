@@ -35,10 +35,12 @@ p {
     color: var(--color-text-muted);
 }
 
+// darker terracotta than the brand tone: #C07D59 is only 3.14:1 on
+// the surface color, below the 4.5:1 AA floor for body-size links
 a {
     @include transition-all;
-    color: var(--color-terracotta);
-    &:hover, &:focus { color: #a86a49; }
+    color: #8F5433;
+    &:hover, &:focus { color: #7A4527; }
 }
 
 hr {
@@ -95,7 +97,7 @@ aside { padding: 60px 0; }
 #mainNav {
     @include sans-serif-font;
     @include transition-all;
-    background: rgba(250,248,245,0.55);
+    background: rgba(250,248,245,0.85);
     border-bottom: 1px solid transparent;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -287,12 +289,13 @@ header::after {
 .btn-xl { padding: 14px 32px; font-size: 13px; }
 
 .btn-primary {
-    background-color: var(--color-terracotta);
-    border-color: var(--color-terracotta);
+    // #9A5E3C keeps the terracotta family but gives white text 5.2:1
+    background-color: #9A5E3C;
+    border-color: #9A5E3C;
     color: #fff;
     &:hover, &:focus, &:active {
-        background-color: #a86a49;
-        border-color: #a86a49;
+        background-color: #8F5433;
+        border-color: #8F5433;
         color: #fff;
     }
 }
