@@ -366,9 +366,11 @@ footer {
     padding: 20px 0 10px;
 }
 
-footer h4 { color: var(--color-olive); }
+footer h4 { color: var(--color-text); }
 footer a  { color: var(--color-taupe); }
-footer a:hover { color: var(--color-terracotta); }
+footer a:hover { color: #8F5433; }
+
+.footer-social a { display: inline-flex; padding: 10px; }
 
 // ── Page content (layout: page) ────────────────────────────────────────────
 .page-content p { font-size: 1.3em; line-height: 1.75; }
