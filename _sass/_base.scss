@@ -261,7 +261,7 @@ header::after {
 
 @media (max-width: 767px) {
     .brand-panel .col-sm-6 { margin-bottom: 18px; }
-    .brand-seal, .brand-seal-ipb { height: clamp(80px,22vw,120px); max-width: 80%; }
+    .brand-seal, .brand-seal-ipb { height: clamp(120px, 38vw, 170px); max-width: 80%; }
 }
 
 // ── Service boxes ──────────────────────────────────────────────────────────
