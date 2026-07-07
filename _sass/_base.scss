@@ -77,6 +77,16 @@ aside { padding: 60px 0; }
     a { color: var(--color-cream); }
 }
 
+// the home mission statement is paragraph-length text in an h2 —
+// give it lede sizing/leading instead of display-heading metrics
+#sobre-texto h2 {
+    font-size: clamp(1.2rem, calc(1rem + 1.4vw), 1.75rem);
+    line-height: 1.55;
+    max-width: 52rem;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
 .text-muted    { color: var(--color-text-muted) !important; }
 .text-primary  { color: var(--color-olive) !important; }
 .text-dark     { color: var(--color-dark) !important; }
@@ -373,7 +383,19 @@ footer a:hover { color: #8F5433; }
 .footer-social a { display: inline-flex; padding: 10px; }
 
 // ── Page content (layout: page) ────────────────────────────────────────────
-.page-content p { font-size: 1.3em; line-height: 1.75; }
+.page-content {
+    max-width: 46rem;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+// the base p rule sets 16px, so inherit must be restated here
+.page-content p { font-size: inherit; line-height: inherit; }
+
+.page-content h2 { margin-top: 3rem; }
+.page-content h3 { margin-top: 2.25rem; }
+.page-content h2 + h3 { margin-top: 0.75rem; }
 
 // ── Link icon hover ────────────────────────────────────────────────────────
 a .fa:hover { color: var(--color-terracotta); }
