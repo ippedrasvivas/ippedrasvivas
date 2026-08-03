@@ -1,0 +1,287 @@
+---
+---
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+{% include head.html %}
+
+<style>
+.reserva-page {
+    min-height: 100vh;
+    background: var(--color-surface, #FAF8F5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px 60px;
+}
+
+.reserva-inner {
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+}
+
+.reserva-logo {
+    width: 120px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+    filter: drop-shadow(0 4px 12px rgba(43,35,24,0.15));
+}
+
+.reserva-name {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.3rem;
+    color: #84754E;
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+}
+
+.reserva-tagline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.9rem;
+    color: #6B5B4E;
+    margin-bottom: 40px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.reserva-instrucao {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1rem;
+    color: #3A2E22;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.pix-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    border: 1.5px solid #DBC8B6;
+    border-radius: 8px;
+    padding: 16px 24px;
+    margin-bottom: 28px;
+    color: #3A2E22;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    box-shadow: 0 2px 8px rgba(43,35,24,0.06);
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.pix-card:hover {
+    border-color: #C07D59;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(43,35,24,0.12);
+}
+
+.pix-card .pix-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #FAF8F5;
+    border: 1.5px solid #DBC8B6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #84754E;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.pix-card:hover .pix-icon,
+.pix-card.copiado .pix-icon {
+    background: #C07D59;
+    border-color: #C07D59;
+    color: #fff;
+}
+
+.pix-card .pix-chave {
+    flex: 1;
+    user-select: all;
+    -webkit-user-select: all;
+    word-break: break-all;
+}
+
+.pix-card .pix-hint {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #C4BCB7;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    transition: color 0.2s ease;
+}
+
+.pix-card.copiado {
+    border-color: #C07D59;
+}
+
+.pix-card.copiado .pix-hint {
+    color: #C07D59;
+    font-weight: 600;
+}
+
+.reserva-divider {
+    border: none;
+    border-top: 1px solid #DBC8B6;
+    margin: 28px auto;
+    max-width: 100%;
+    opacity: 1;
+}
+
+.dados-titulo {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.85rem;
+    color: #6B5B4E;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.dados-card {
+    background: #fff;
+    border: 1.5px solid #DBC8B6;
+    border-radius: 8px;
+    padding: 8px 24px;
+    box-shadow: 0 2px 8px rgba(43,35,24,0.06);
+    font-family: 'Source Sans 3', sans-serif;
+    text-align: left;
+}
+
+.dados-linha {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #F0E9E1;
+}
+
+.dados-linha:last-child {
+    border-bottom: none;
+}
+
+.dados-rotulo {
+    font-size: 0.8rem;
+    color: #6B5B4E;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.dados-valor {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #3A2E22;
+    text-align: right;
+    user-select: all;
+    -webkit-user-select: all;
+    word-break: break-word;
+}
+</style>
+
+<body id="page-top">
+    {% include nav.html %}
+
+    <div class="reserva-page">
+        <div class="reserva-inner">
+            <img src="img/ippv-logo-2026.png" alt="Logo Igreja Presbiteriana Pedras Vivas" class="reserva-logo">
+            <p class="reserva-name">Contribua com a reserva</p>
+            <p class="reserva-tagline">Para a compra do nosso imóvel</p>
+
+            <p class="reserva-instrucao">
+                Faça a sua oferta pelo Pix.
+                Toque na chave abaixo para copiá-la:
+            </p>
+
+            <button type="button" class="pix-card" id="copiar-pix"
+                    aria-label="Copiar chave Pix">
+                <div class="pix-icon"><i class="fa fa-qrcode"></i></div>
+                <span class="pix-chave" id="chave-pix">pedrastesouraria@gmail.com</span>
+                <span class="pix-hint" id="pix-hint">Copiar</span>
+            </button>
+
+            <hr class="reserva-divider">
+
+            <p class="dados-titulo">Ou por transferência / depósito</p>
+
+            <div class="dados-card">
+                <div class="dados-linha">
+                    <span class="dados-rotulo">Banco</span>
+                    <span class="dados-valor">290 – PagBank</span>
+                </div>
+                <div class="dados-linha">
+                    <span class="dados-rotulo">Agência</span>
+                    <span class="dados-valor">0001</span>
+                </div>
+                <div class="dados-linha">
+                    <span class="dados-rotulo">Conta</span>
+                    <span class="dados-valor">89048830-7</span>
+                </div>
+                <div class="dados-linha">
+                    <span class="dados-rotulo">Tipo</span>
+                    <span class="dados-valor">Conta de pagamento</span>
+                </div>
+                <div class="dados-linha">
+                    <span class="dados-rotulo">CNPJ</span>
+                    <span class="dados-valor">30.061.271/0001-18</span>
+                </div>
+                <div class="dados-linha">
+                    <span class="dados-rotulo">Nome</span>
+                    <span class="dados-valor">Igreja Presbiteriana Pedras Vivas</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include footer.html %}
+    {% include scripts.html %}
+
+    <script>
+    (function () {
+        var botao = document.getElementById('copiar-pix');
+        var hint = document.getElementById('pix-hint');
+        var chave = document.getElementById('chave-pix').textContent.trim();
+
+        function confirmar() {
+            botao.classList.add('copiado');
+            hint.textContent = 'Copiado!';
+            setTimeout(function () {
+                botao.classList.remove('copiado');
+                hint.textContent = 'Copiar';
+            }, 2000);
+        }
+
+        function copiarFallback() {
+            var intervalo = document.createRange();
+            intervalo.selectNodeContents(document.getElementById('chave-pix'));
+            var selecao = window.getSelection();
+            selecao.removeAllRanges();
+            selecao.addRange(intervalo);
+            try {
+                if (document.execCommand('copy')) {
+                    confirmar();
+                }
+            } catch (erro) { /* seleção fica visível para cópia manual */ }
+        }
+
+        botao.addEventListener('click', function () {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(chave).then(confirmar, copiarFallback);
+            } else {
+                copiarFallback();
+            }
+        });
+    })();
+    </script>
+</body>
+
+</html>
